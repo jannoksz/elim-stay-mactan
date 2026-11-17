@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="The building and pool">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dfecee"/>
+      <stop offset="100%" stop-color="#cfe1e2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect x="60" y="130" width="1080" height="620" rx="38" fill="#d6c0a4" opacity="0.9"/>
+  <rect x="130" y="200" width="940" height="480" rx="48" fill="#d1d9cf"/>
+  <rect x="210" y="300" width="780" height="190" rx="28" fill="#b6dfe0"/>
+  <rect x="250" y="330" width="700" height="130" rx="18" fill="#73b7c0" opacity="0.8"/>
+  <rect x="350" y="80" width="500" height="120" rx="18" fill="#f5eee1" opacity="0.7"/>
+  <rect x="370" y="460" width="190" height="180" rx="18" fill="#d8b89e"/>
+  <rect x="640" y="460" width="190" height="180" rx="18" fill="#d8b89e"/>
+  <rect x="200" y="700" width="800" height="40" rx="20" fill="#a39e8e" opacity="0.8"/>
+  <path d="M0 650 C 280 620, 430 720, 640 670 S 1040 620, 1200 670 L 1200 900 L 0 900 Z" fill="#8eb1a6" opacity="0.95"/>
+  <circle cx="300" cy="150" r="82" fill="#f4d6a5" opacity="0.8"/>
+</svg>

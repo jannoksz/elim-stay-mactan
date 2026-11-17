@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Queen-size bed with soft curtains">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3e4d3"/>
+      <stop offset="100%" stop-color="#d9b899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="0" y="570" width="1200" height="330" fill="#c49a5a" opacity="0.18"/>
+  <rect x="160" y="300" width="880" height="240" rx="34" fill="#c69376"/>
+  <rect x="210" y="350" width="780" height="170" rx="24" fill="#d8b195"/>
+  <rect x="250" y="394" width="710" height="90" rx="18" fill="#f0d8bf"/>
+  <rect x="260" y="250" width="220" height="120" rx="22" fill="#8f5d46" opacity="0.85"/>
+  <rect x="710" y="250" width="220" height="120" rx="22" fill="#8f5d46" opacity="0.85"/>
+  <path d="M260 250 C 230 180, 170 150, 160 220 L 160 420 C 200 390, 230 370, 260 350 Z" fill="#f4d9b4" opacity="0.95"/>
+  <path d="M940 250 C 970 180, 1030 150, 1040 220 L 1040 420 C 1000 390, 970 370, 940 350 Z" fill="#f4d9b4" opacity="0.95"/>
+  <rect x="236" y="255" width="220" height="18" rx="9" fill="#fff1dc" opacity="0.5"/>
+  <rect x="742" y="255" width="220" height="18" rx="9" fill="#fff1dc" opacity="0.5"/>
+  <rect x="190" y="610" width="820" height="120" rx="24" fill="#a86c58" opacity="0.88"/>
+  <rect x="320" y="155" width="560" height="120" rx="46" fill="#d7b89c" opacity="0.8"/>
+  <rect x="350" y="150" width="500" height="16" rx="8" fill="#f9e8d8" opacity="0.7"/>
+  <rect x="500" y="110" width="200" height="110" rx="30" fill="#f5efe8" opacity="0.94"/>
+  <circle cx="600" cy="165" r="46" fill="#f3c7bd" opacity="0.6"/>
+  <rect x="160" y="700" width="120" height="80" rx="18" fill="#9d6e5f" opacity="0.48"/>
+  <rect x="920" y="700" width="120" height="80" rx="18" fill="#9d6e5f" opacity="0.48"/>
+</svg>

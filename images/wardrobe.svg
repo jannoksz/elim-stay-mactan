@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Clothes cabinet and vanity desk">
+  <rect width="1200" height="900" fill="#f0e2d2"/>
+  <rect x="120" y="110" width="960" height="680" rx="36" fill="#d9bf9c" opacity="0.28"/>
+  <rect x="210" y="220" width="300" height="420" rx="18" fill="#8b5e46"/>
+  <rect x="248" y="255" width="224" height="150" rx="14" fill="#ddc2a8" opacity="0.8"/>
+  <rect x="248" y="435" width="224" height="150" rx="14" fill="#ddc2a8" opacity="0.8"/>
+  <rect x="680" y="200" width="260" height="420" rx="20" fill="#c89a6a"/>
+  <rect x="730" y="250" width="160" height="200" rx="18" fill="#f4e9d9"/>
+  <rect x="760" y="520" width="100" height="60" rx="14" fill="#7b4f3f"/>
+  <rect x="120" y="670" width="960" height="80" rx="20" fill="#b77e5d" opacity="0.54"/>
+  <rect x="420" y="620" width="260" height="140" rx="18" fill="#efebea"/>
+  <circle cx="550" cy="690" r="26" fill="#c49a5a" opacity="0.8"/>
+</svg>

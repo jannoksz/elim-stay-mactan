@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Bathroom with washing machine">
+  <rect width="1200" height="900" fill="#edf1ef"/>
+  <rect x="0" y="680" width="1200" height="220" fill="#d0d8d9" opacity="0.5"/>
+  <rect x="120" y="220" width="960" height="500" rx="26" fill="#dfece8"/>
+  <rect x="200" y="300" width="400" height="280" rx="22" fill="#c9d8d4"/>
+  <rect x="680" y="300" width="260" height="280" rx="18" fill="#9ac0b7"/>
+  <rect x="740" y="350" width="140" height="178" rx="18" fill="#f1f5f2"/>
+  <rect x="260" y="410" width="280" height="80" rx="16" fill="#f7f3ee"/>
+  <rect x="300" y="250" width="220" height="90" rx="18" fill="#efe7db"/>
+  <rect x="390" y="170" width="120" height="120" rx="18" fill="#c59b7d" opacity="0.8"/>
+  <rect x="180" y="650" width="840" height="30" rx="15" fill="#aeb6b5" opacity="0.7"/>
+  <circle cx="960" cy="600" r="56" fill="#c7d6d4" opacity="0.9"/>
+</svg>
