@@ -28,13 +28,13 @@ function createPlaceholderImage(title, hue = "#c49a5a") {
 }
 
 const GALLERY_IMAGES = [
-  { src: "images/IMG_5031.png", title: "Bedroom with pillows in focus", label: "Bedroom" },
-  { src: "images/IMG_5034.png", title: "Living room with a comfortable sofa", label: "Living room" },
-  { src: "images/IMG_5038.png", title: "A closer look inside the condo", label: "Condo details" },
-  { src: "images/IMG_5044.png", title: "Bathroom with vanity and washing machine", label: "Bathroom" },
-  { src: "images/IMG_5085.png", title: "Dining area", label: "Dining area" },
-  { src: "images/IMG_5735.png", title: "Kitchen area", label: "Kitchen" },
-  { src: "images/IMG_5796.JPG", title: "Pool and buildings at Primeworld District", label: "Pool" },
+  { src: "images/IMG_5031.webp", title: "Bedroom with pillows in focus", label: "Bedroom" },
+  { src: "images/IMG_5034.webp", title: "Living room with a comfortable sofa", label: "Living room" },
+  { src: "images/IMG_5038.webp", title: "A closer look inside the condo", label: "Condo details" },
+  { src: "images/IMG_5044.webp", title: "Bathroom with vanity and washing machine", label: "Bathroom" },
+  { src: "images/IMG_5085.webp", title: "Dining area", label: "Dining area" },
+  { src: "images/IMG_5735.webp", title: "Kitchen area", label: "Kitchen" },
+  { src: "images/IMG_5796.webp", title: "Pool and buildings at Primeworld District", label: "Pool" },
 ];
 
 const AMENITIES = [
@@ -247,10 +247,6 @@ function initScrollEffects() {
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const width = maxScroll > 0 ? (y / maxScroll) * 100 : 0;
     progressBar.style.width = `${width}%`;
-
-    if (!prefersReducedMotion && y < heroHeight) {
-      hero.style.backgroundPosition = `center ${Math.min(70 + y * 0.05, 80)}%`;
-    }
 
     ticking = false;
   };
