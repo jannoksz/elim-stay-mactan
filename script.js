@@ -1,7 +1,7 @@
 var FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSdaF4G4A-Uh_BewEIPwdRiF6quOQtsIWHT3nlm4aUW-WL_xyA/viewform", OWNER_EMAIL="Elimstaymactan1107@gmail.com", TITLE="Elim Stay Mactan", RATE=1990, MAX=4;
 var PH=[
- {s:"images/IMG_5031.webp",t:"Bedroom with pillows in focus"},
  {s:"images/IMG_5034.webp",t:"Living room with a comfortable sofa"},
+ {s:"images/IMG_5031.webp",t:"Bedroom with pillows in focus"},
  {s:"images/IMG_5038.webp",t:"A closer look inside the condo"},
  {s:"images/IMG_5044.webp",t:"Bathroom with vanity and washing machine"},
  {s:"images/IMG_5085.webp",t:"Dining area"},
