@@ -312,7 +312,8 @@ dialog.lbx::backdrop{background:rgba(20,12,8,.9)}
   .head{margin-bottom:20px}
   .head h2{font-size:clamp(25px,7vw,32px)}
   .mos{grid-auto-rows:145px;gap:9px}
-  .stage{height:clamp(280px,100vw,390px);aspect-ratio:auto;border-radius:22px}
+  .stage{height:auto;aspect-ratio:3/4;border-radius:22px}
+  .stage img{object-fit:contain}
   .stage.landscape{height:auto;aspect-ratio:4/3}
   .scap{font-size:18px}
   .sth{gap:8px}
