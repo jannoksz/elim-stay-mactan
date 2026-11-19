@@ -62,7 +62,7 @@ section{padding:68px 0 0}
 .near-ic{grid-column:1;grid-row:1;width:22px;height:22px;align-self:center;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .near h3{grid-column:2;grid-row:1;align-self:center;font-size:22px;margin-bottom:4px}
 .near p{grid-column:2;grid-row:2;margin:0;color:#ead9bd;font-size:15px}
-.near-view{grid-column:2;grid-row:3;display:inline-block;width:fit-content;margin-top:8px;color:var(--cream);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.near-view{grid-column:2;grid-row:3;display:inline-block;width:fit-content;margin-top:8px;padding:0;border:0;background:none;color:var(--cream);font:700 13px/1.4 "Nunito Sans",system-ui,sans-serif;text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .near-view:hover{color:var(--gold)}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:0;padding:0;list-style:none;counter-reset:s}
 .steps li{display:grid;grid-template-columns:38px 28px minmax(0,1fr);align-items:center;gap:12px;counter-increment:s;background:var(--soft);border-radius:22px;padding:24px;font-weight:600}
@@ -118,13 +118,23 @@ dialog img{width:100%;max-height:70vh;object-fit:contain;display:block;backgroun
   .am li:nth-child(7):hover svg,.am li:nth-child(10):hover svg{animation:amenity-pulse .55s ease}
   .am li:nth-child(9):hover svg{animation:amenity-spin .65s ease}
   .am li:nth-child(11):hover svg{animation:amenity-pop .45s ease}
-  @keyframes amenity-bounce{50%{transform:translateY(-5px)}}
-  @keyframes amenity-tilt{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
-  @keyframes amenity-wiggle{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
-  @keyframes amenity-drop{35%{transform:translateY(-4px)}70%{transform:translateY(2px)}}
-  @keyframes amenity-pulse{50%{transform:scale(1.16)}}
-  @keyframes amenity-spin{to{transform:rotate(360deg)}}
-  @keyframes amenity-pop{50%{transform:scale(1.18)}}
+}
+@keyframes amenity-bounce{50%{transform:translateY(-5px)}}
+@keyframes amenity-tilt{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+@keyframes amenity-wiggle{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+@keyframes amenity-drop{35%{transform:translateY(-4px)}70%{transform:translateY(2px)}}
+@keyframes amenity-pulse{50%{transform:scale(1.16)}}
+@keyframes amenity-spin{to{transform:rotate(360deg)}}
+@keyframes amenity-pop{50%{transform:scale(1.18)}}
+@media(max-width:640px) and (prefers-reduced-motion:no-preference){
+  .am li.in:nth-child(1) .ic svg,.am li.in:nth-child(8) .ic svg{animation:amenity-bounce .55s ease}
+  .am li.in:nth-child(2) .ic svg,.am li.in:nth-child(5) .ic svg{animation:amenity-tilt .5s ease}
+  .am li.in:nth-child(3) .ic svg,.am li.in:nth-child(6) .ic svg{animation:amenity-wiggle .5s ease}
+  .am li.in:nth-child(4) .ic svg,.am li.in:nth-child(12) .ic svg{animation:amenity-drop .55s ease}
+  .am li.in:nth-child(7) .ic svg,.am li.in:nth-child(10) .ic svg{animation:amenity-pulse .55s ease}
+  .am li.in:nth-child(9) .ic svg{animation:amenity-spin .65s ease}
+  .am li.in:nth-child(11) .ic svg{animation:amenity-pop .45s ease}
+  .am li.in:nth-child(even) .ic svg{animation-delay:.08s}
 }
 .fact svg{transition:transform .3s ease}.fact:hover svg{transform:translateY(-3px) scale(1.15)}
 .btn:active{transform:scale(.97)}
@@ -187,6 +197,12 @@ dialog img{width:100%;max-height:70vh;object-fit:contain;display:block;backgroun
 .kl{margin:0;padding:0;list-style:none}
 .kl li{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.4}
 .kl li:last-child{border-bottom:0}
+.place-icon{flex:none;width:22px;height:22px;margin-top:1px;fill:none;stroke:var(--cocoa);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.place-list a{display:block;color:var(--ink);font-weight:600;line-height:1.4;text-decoration:underline;text-underline-offset:3px}
+.place-list a:hover{color:var(--cocoa)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .place-icon{stroke:var(--gold)}:root:not([data-theme="light"]) .place-list a:hover{color:var(--gold)}}
+:root[data-theme="dark"] .place-icon{stroke:var(--gold)}
+:root[data-theme="dark"] .place-list a:hover{color:var(--gold)}
 .rule-icon{flex:none;width:24px;height:24px;margin-top:1px;padding:4px;border-radius:50%;background:var(--soft);fill:none;stroke:var(--cocoa);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 @media(prefers-color-scheme:dark){.rule-icon{stroke:var(--gold)}}
 
@@ -245,6 +261,8 @@ dialog.lbx::backdrop{background:rgba(20,12,8,.9)}
 .slider{display:grid;gap:14px;max-width:960px;margin:0 auto}
 .stage{position:relative;border-radius:28px;overflow:hidden;background:var(--soft);aspect-ratio:4/3;box-shadow:0 24px 60px rgba(60,35,20,.18)}
 .stage img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .25s ease,transform .8s ease}
+.stage.landscape{background:var(--deep)}
+.stage.landscape img{object-fit:contain}
 .stage img[src*="IMG_5031"]{object-position:50% 62%}
 .stage:hover img{transform:scale(1.03)}
 .stage img.out{opacity:0}
@@ -254,6 +272,7 @@ dialog.lbx::backdrop{background:rgba(20,12,8,.9)}
 .scount{position:absolute;left:16px;bottom:16px;background:rgba(36,20,12,.62);color:#fbf1de;font:700 14px "Nunito Sans",sans-serif;letter-spacing:.08em;padding:6px 14px;border-radius:99px}
 .sexp{position:absolute;right:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(36,20,12,.62);color:#fbf1de;font-size:20px;cursor:pointer;padding:0}
 .scap{margin:0;text-align:center;font:600 22px "Fraunces",serif}
+.photo-hint{margin:-8px 0 0;color:var(--muted);font:600 11px/1.3 "Nunito Sans",sans-serif;text-align:center}
 .sth{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 8px}
 .sth button{flex:none;width:96px;height:66px;padding:0;border:2px solid transparent;border-radius:14px;overflow:hidden;opacity:.6;cursor:pointer;background:none;transition:opacity .25s ease,border-color .25s ease}
 .sth button.on{opacity:1;border-color:var(--gold)}
@@ -290,6 +309,7 @@ dialog.lbx::backdrop{background:rgba(20,12,8,.9)}
   .head h2{font-size:clamp(25px,7vw,32px)}
   .mos{grid-auto-rows:145px;gap:9px}
   .stage{height:clamp(280px,100vw,390px);aspect-ratio:auto;border-radius:22px}
+  .stage.landscape{height:auto;aspect-ratio:4/3}
   .scap{font-size:18px}
   .sth{gap:8px}
   .sth button{width:78px;height:54px}

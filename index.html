@@ -47,6 +47,7 @@
         <button type="button" class="sexp" id="slExp" aria-label="View full screen">⤢</button>
       </div>
       <p class="scap" id="slCap"></p>
+      <p class="photo-hint">Tap or click the photo to view full size</p>
       <div class="sth" id="slThumbs"></div>
     </div>
   </section>
@@ -59,10 +60,10 @@
   <section>
     <div class="head"><h2>Close to what matters</h2></div>
     <div class="near">
-      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-2 11H5L3 9Z"/><path d="m7 9 5-6 5 6M8 13v3m4-3v3m4-3v3"/></svg><h3>Shopping malls</h3><p>Groceries and errands nearby.</p><a class="near-view" href="https://www.google.com/maps/search/?api=1&amp;query=shopping+malls+near+Primeworld+District+Lapu-Lapu+City" target="_blank" rel="noopener" aria-label="View nearby shopping malls in Google Maps">View places →</a></div>
-      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v7a4 4 0 0 0 4 4h1v7M7 3v4m4-4v4M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg><h3>Restaurants</h3><p>Plenty of places to eat.</p><a class="near-view" href="https://www.google.com/maps/search/?api=1&amp;query=restaurants+near+Primeworld+District+Lapu-Lapu+City" target="_blank" rel="noopener" aria-label="View nearby restaurants in Google Maps">View places →</a></div>
-      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M2 21h20M12 7v6m-3-3h6M8 17h.01M16 17h.01"/></svg><h3>Hospitals</h3><p>Care close by.</p><a class="near-view" href="https://www.google.com/maps/search/?api=1&amp;query=hospitals+near+Primeworld+District+Lapu-Lapu+City" target="_blank" rel="noopener" aria-label="View nearby hospitals in Google Maps">View places →</a></div>
-      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0H3Z"/><path d="M12 12v7a3 3 0 0 0 6 0M12 12 6 7m6 5 6-5"/></svg><h3>Beach resorts</h3><p>Popular beaches around Mactan.</p><a class="near-view" href="https://www.google.com/maps/search/?api=1&amp;query=beach+resorts+near+Primeworld+District+Lapu-Lapu+City" target="_blank" rel="noopener" aria-label="View nearby beach resorts in Google Maps">View places →</a></div>
+      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-2 11H5L3 9Z"/><path d="m7 9 5-6 5 6M8 13v3m4-3v3m4-3v3"/></svg><h3>Shopping malls</h3><p>Groceries and errands nearby.</p><button type="button" class="near-view" data-d="places-malls" aria-haspopup="dialog" aria-controls="kd" aria-label="Show nearby shopping malls">View places →</button></div>
+      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v7a4 4 0 0 0 4 4h1v7M7 3v4m4-4v4M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg><h3>Restaurants</h3><p>Plenty of places to eat.</p><button type="button" class="near-view" data-d="places-restaurants" aria-haspopup="dialog" aria-controls="kd" aria-label="Show nearby restaurants">View places →</button></div>
+      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><h3>Hospitals</h3><p>Care close by.</p><button type="button" class="near-view" data-d="places-hospitals" aria-haspopup="dialog" aria-controls="kd" aria-label="Show nearby hospitals">View places →</button></div>
+      <div><svg class="near-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0H3Z"/><path d="M12 12v7a3 3 0 0 0 6 0M12 12 6 7m6 5 6-5"/></svg><h3>Beach resorts</h3><p>Popular beaches around Mactan.</p><button type="button" class="near-view" data-d="places-beaches" aria-haspopup="dialog" aria-controls="kd" aria-label="Show Mactan beach resorts">View places →</button></div>
     </div>
   </section>
 
@@ -119,6 +120,34 @@
         <li><svg class="rule-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h12l5 4v4H8l-5-4z"/><path d="m15 8 2-4h4M8 16v4m9-4v4"/></svg>CCTV on the hallway and lobby</li>
         <li><svg class="rule-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2M8 3l2 2m4-2-2 2"/></svg>Smoke alarm installed</li>
         <li><svg class="rule-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="11" r="4"/><path d="M9 11h6m-3-3v6M9 18h6"/></svg>Carbon monoxide alarm not reported. Bringing a portable detector for your trip is suggested.</li>
+      </ul>
+    </template>
+    <template id="t-places-malls" data-title="Nearby shopping malls">
+      <ul class="kl place-list">
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-2 11H5L3 9Z"/><path d="m7 9 5-6 5 6M8 13v3m4-3v3m4-3v3"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Island+Central+Mactan+Lapu-Lapu+City" target="_blank" rel="noopener">Island Central Mactan — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-2 11H5L3 9Z"/><path d="m7 9 5-6 5 6M8 13v3m4-3v3m4-3v3"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Mactan+Town+Center+Lapu-Lapu+City" target="_blank" rel="noopener">Mactan Town Center — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-2 11H5L3 9Z"/><path d="m7 9 5-6 5 6M8 13v3m4-3v3m4-3v3"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=The+Outlets+at+MEZ2+Estate+Lapu-Lapu+City" target="_blank" rel="noopener">The Outlets at MEZ2 Estate — View on Google Maps →</a></li>
+      </ul>
+    </template>
+    <template id="t-places-restaurants" data-title="Nearby restaurants">
+      <ul class="kl place-list">
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v7a4 4 0 0 0 4 4h1v7M7 3v4m4-4v4M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Spoon+%26+Spices+Primeworld+District+Lapu-Lapu+City" target="_blank" rel="noopener">Spoon &amp; Spices — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v7a4 4 0 0 0 4 4h1v7M7 3v4m4-4v4M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=7107+Restaurant+Mactan+Lapu-Lapu+City" target="_blank" rel="noopener">7107 Restaurant — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v7a4 4 0 0 0 4 4h1v7M7 3v4m4-4v4M16 3v18m0-18c3 2 4 5 4 8h-4"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Buko+Seaside+Bar+and+Restaurant+Lapu-Lapu+City" target="_blank" rel="noopener">Buko Seaside Bar and Restaurant — View on Google Maps →</a></li>
+      </ul>
+    </template>
+    <template id="t-places-hospitals" data-title="Nearby hospitals">
+      <ul class="kl place-list">
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Lapu-Lapu+City+Hospital" target="_blank" rel="noopener">Lapu-Lapu City Hospital — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=MactanMed+Mactan+Optimal+Medical+Center" target="_blank" rel="noopener">MactanMed (Mactan Optimal Medical Center) — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Mactan+Doctors+Hospital+Lapu-Lapu+City" target="_blank" rel="noopener">Mactan Doctors' Hospital — View on Google Maps →</a></li>
+      </ul>
+    </template>
+    <template id="t-places-beaches" data-title="Mactan beach resorts">
+      <ul class="kl place-list">
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0H3Z"/><path d="M12 12v7a3 3 0 0 0 6 0M12 12 6 7m6 5 6-5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Bluewater+Maribago+Beach+Resort+Lapu-Lapu+City" target="_blank" rel="noopener">Bluewater Maribago Beach Resort — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0H3Z"/><path d="M12 12v7a3 3 0 0 0 6 0M12 12 6 7m6 5 6-5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Crimson+Resort+and+Spa+Mactan" target="_blank" rel="noopener">Crimson Resort and Spa Mactan — View on Google Maps →</a></li>
+        <li><svg class="place-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0H3Z"/><path d="M12 12v7a3 3 0 0 0 6 0M12 12 6 7m6 5 6-5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Costabella+Tropical+Beach+Hotel+Mactan" target="_blank" rel="noopener">Costabella Tropical Beach Hotel — View on Google Maps →</a></li>
       </ul>
     </template>
   </section>

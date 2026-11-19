@@ -6,7 +6,7 @@ var PH=[
  {s:"images/IMG_5044.webp",t:"Bathroom with vanity and washing machine"},
  {s:"images/IMG_5085.webp",t:"Dining area"},
  {s:"images/IMG_5735.webp",t:"Kitchen area"},
- {s:"images/IMG_5796.webp",t:"Pool and buildings at Primeworld District"}
+ {s:"images/IMG_5796.webp",t:"Pool and buildings at Primeworld District",landscape:true}
 ];
 var AM=[
  ["M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3","Queen-size bed"],
@@ -41,7 +41,7 @@ function show(i){var n=PH.length,old=cur;cur=(i+n)%n;
   try{th[cur].scrollIntoView({inline:"center",block:"nearest"})}catch(e){}}
 function img(i){var m=document.createElement("img");m.src=PH[i].s;m.alt=PH[i].t;return m}
 var si=0;
-function slGo(i){var n=PH.length;si=(i+n)%n;var im=$("slImg");im.classList.add("out");
+function slGo(i){var n=PH.length;si=(i+n)%n;var im=$("slImg");$("stage").classList.toggle("landscape",!!PH[si].landscape);im.classList.add("out");
   setTimeout(function(){im.src=PH[si].s;im.alt=PH[si].t;im.classList.remove("out")},180);
   $("slCap").textContent=PH[si].t;$("slCount").textContent=(si+1)+" / "+n;
   var tb=$("slThumbs"),th=tb.children;for(var k=0;k<th.length;k++)th[k].classList.toggle("on",k===si);
@@ -87,7 +87,7 @@ $("lbImg").addEventListener("touchend",function(e){if(sx===null)return;var dx=e.
 
 /* things to know dialog */
 (function(){var d=$("kd");if(!d)return;
-[].forEach.call(document.querySelectorAll(".more[data-d]"),function(b){b.addEventListener("click",function(){
+[].forEach.call(document.querySelectorAll(".more[data-d],.near-view[data-d]"),function(b){b.addEventListener("click",function(){
   var t=document.getElementById("t-"+b.getAttribute("data-d"));$("kt").textContent=t.getAttribute("data-title");$("kb").innerHTML=t.innerHTML;
   if(d.showModal)d.showModal();else d.setAttribute("open","")})});
 $("kx").addEventListener("click",function(){d.close()});
