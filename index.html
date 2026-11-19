@@ -38,7 +38,17 @@
 <main class="wrap">
   <section id="photos">
     <div class="head"><h2>Take a look inside</h2></div>
-    <div class="mos" id="mos"></div>
+    <div class="slider" id="sl">
+      <div class="stage" id="stage">
+        <img id="slImg" alt="">
+        <button type="button" class="sn l" id="slPrev" aria-label="Previous photo">‹</button>
+        <button type="button" class="sn r" id="slNext" aria-label="Next photo">›</button>
+        <span class="scount" id="slCount"></span>
+        <button type="button" class="sexp" id="slExp" aria-label="View full screen">⤢</button>
+      </div>
+      <p class="scap" id="slCap"></p>
+      <div class="sth" id="slThumbs"></div>
+    </div>
   </section>
 
   <section>
@@ -127,20 +137,13 @@
 </div></div>
 <footer>© Elim Stay Mactan · 0916 936 3827 · <a href="https://www.facebook.com/profile.php?id=61555137846934" target="_blank" rel="noopener">Facebook</a> · Lapu-Lapu, Philippines</footer>
 
-<dialog id="lb" class="lb" aria-label="Photo gallery">
-  <img id="lbBg" class="lb-bg" alt="" aria-hidden="true">
-  <div class="lb-head">
-    <span class="lb-brand">ELIM STAY <small>MACTAN</small></span>
-    <span id="lbCount" class="lb-count" aria-live="polite"></span>
-    <button type="button" id="lbClose" class="lb-close" aria-label="Close photo gallery">×</button>
-  </div>
-  <button type="button" id="prev" class="lb-nav lb-prev" aria-label="Previous photo"><span aria-hidden="true">‹</span></button>
-  <figure id="lbFigure" class="lb-figure">
-    <img id="lbImg" alt="">
-    <figcaption id="lbCap"></figcaption>
-  </figure>
-  <button type="button" id="next" class="lb-nav lb-next" aria-label="Next photo"><span aria-hidden="true">›</span></button>
-  <div id="lbThumbs" class="lb-thumbs" role="group" aria-label="Choose a photo"></div>
+<dialog id="lb" class="lbx" aria-label="Photo gallery">
+  <img id="lbBg" class="lbbg" alt="" aria-hidden="true">
+  <div class="lbtop"><span id="lbCount"></span><button type="button" id="lbClose" aria-label="Close">×</button></div>
+  <button type="button" id="prev" class="lbnav l" aria-label="Previous photo">‹</button>
+  <figure class="lbfig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button type="button" id="next" class="lbnav r" aria-label="Next photo">›</button>
+  <div class="lbthumbs" id="lbThumbs"></div>
 </dialog>
 
 <script src="script.js"></script>
