@@ -1,3 +1,5 @@
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:500 700;font-display:swap;src:url("fonts/fraunces-latin.woff2") format("woff2")}
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url("fonts/nunito-sans-latin.woff2") format("woff2")}
 :root{--bg:#fbf5ea;--surface:#fffaf1;--ink:#3b2a22;--muted:#7d6a5c;--line:#eadcc6;--soft:#f5e6c8;--gold:#c49a5a;--cocoa:#6f4a3b;--deep:#43291f;--cream:#fbf1de;--btn:#c49a5a;--btn-ink:#2e1c10;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1611;--surface:#271e17;--ink:#f3e9d8;--muted:#b9a896;--line:#3b2f25;--soft:#33271d}}
@@ -158,6 +160,7 @@ dialog img{width:100%;max-height:70vh;object-fit:contain;display:block;backgroun
 .opt .go{font-weight:700}
 .opt.pri{background:var(--gold);color:#2e1c10}
 .opt.pri .tag,.opt.pri p{color:#4a3118}
+.booking-privacy{margin:12px 0 0;color:#e8d8c0;font-size:13px;line-height:1.45;max-width:none}
 .alt{margin:18px 0 0;color:#e8d8c0;font-size:15px;max-width:none}
 .alt a{color:var(--cream);font-weight:700}
 

@@ -1,4 +1,4 @@
-var FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSdaF4G4A-Uh_BewEIPwdRiF6quOQtsIWHT3nlm4aUW-WL_xyA/viewform", OWNER_EMAIL="Elimstaymactan1107@gmail.com", TITLE="Elim Stay Mactan", RATE=1990, MAX=4;
+var RATE=1990;
 var PH=[
  {s:"images/IMG_5034.webp",t:"Living room with a comfortable sofa"},
  {s:"images/IMG_5031.webp",t:"Bedroom with pillows in focus"},
@@ -25,7 +25,11 @@ var AM=[
 var $=function(id){return document.getElementById(id)};
 function peso(n){return "₱"+Math.round(n).toLocaleString("en-PH")}
 $("pr").textContent=peso(RATE);
-AM.forEach(function(a){var li=document.createElement("li");li.innerHTML='<span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+a[0]+'"/></svg></span>';li.appendChild(document.createTextNode(a[1]));$("am").appendChild(li)});
+AM.forEach(function(a){
+  var ns="http://www.w3.org/2000/svg",li=document.createElement("li"),ic=document.createElement("span"),svg=document.createElementNS(ns,"svg"),path=document.createElementNS(ns,"path");
+  ic.className="ic";svg.setAttribute("viewBox","0 0 24 24");svg.setAttribute("aria-hidden","true");path.setAttribute("d",a[0]);
+  svg.appendChild(path);ic.appendChild(svg);li.appendChild(ic);li.appendChild(document.createTextNode(a[1]));$("am").appendChild(li)
+});
 
 var cur=0;
 var lbBuilt=false;
@@ -97,7 +101,8 @@ $("lbImg").addEventListener("touchend",function(e){if(sx===null)return;var dx=e.
 /* things to know dialog */
 (function(){var d=$("kd");if(!d)return;
 [].forEach.call(document.querySelectorAll(".more[data-d],.near-view[data-d]"),function(b){b.addEventListener("click",function(){
-  var t=document.getElementById("t-"+b.getAttribute("data-d"));$("kt").textContent=t.getAttribute("data-title");$("kb").innerHTML=t.innerHTML;
+  var t=document.getElementById("t-"+b.getAttribute("data-d")),body=$("kb");$("kt").textContent=t.getAttribute("data-title");
+  while(body.firstChild)body.removeChild(body.firstChild);body.appendChild(t.content.cloneNode(true));
   if(d.showModal)d.showModal();else d.setAttribute("open","")})});
 $("kx").addEventListener("click",function(){d.close()});
 d.addEventListener("click",function(e){if(e.target===d)d.close()});})();
