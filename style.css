@@ -102,6 +102,23 @@ dialog img{width:100%;max-height:70vh;object-fit:contain;display:block;backgroun
 .am li:hover,.steps li:hover,.near div:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(60,35,20,.16)}
 .am li:hover{border-color:var(--gold)}
 .am li:hover .ic{background:var(--gold)}.am li:hover svg{stroke:var(--deep)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .am li .ic svg{transform-origin:center}
+  .am li:nth-child(1):hover svg,.am li:nth-child(8):hover svg{animation:amenity-bounce .55s ease}
+  .am li:nth-child(2):hover svg,.am li:nth-child(5):hover svg{animation:amenity-tilt .5s ease}
+  .am li:nth-child(3):hover svg,.am li:nth-child(6):hover svg{animation:amenity-wiggle .5s ease}
+  .am li:nth-child(4):hover svg,.am li:nth-child(12):hover svg{animation:amenity-drop .55s ease}
+  .am li:nth-child(7):hover svg,.am li:nth-child(10):hover svg{animation:amenity-pulse .55s ease}
+  .am li:nth-child(9):hover svg{animation:amenity-spin .65s ease}
+  .am li:nth-child(11):hover svg{animation:amenity-pop .45s ease}
+  @keyframes amenity-bounce{50%{transform:translateY(-5px)}}
+  @keyframes amenity-tilt{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+  @keyframes amenity-wiggle{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+  @keyframes amenity-drop{35%{transform:translateY(-4px)}70%{transform:translateY(2px)}}
+  @keyframes amenity-pulse{50%{transform:scale(1.16)}}
+  @keyframes amenity-spin{to{transform:rotate(360deg)}}
+  @keyframes amenity-pop{50%{transform:scale(1.18)}}
+}
 .fact svg{transition:transform .3s ease}.fact:hover svg{transform:translateY(-3px) scale(1.15)}
 .btn:active{transform:scale(.97)}
 .arch{transition:transform .3s ease}
